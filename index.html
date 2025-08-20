@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iconic Ahmed - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<header>
+  <img src="https://i.imgur.com/sGfa9gv.png" alt="Iconic Ahmed Profile Image" />
+  <h1>Hi, I'm Iconic Ahmed</h1>
+  <p>
+    I’m a passionate web developer and tutorial creator. I specialize in HTML, CSS, and JavaScript. I love creating interactive websites and animations that help people learn, play, and build amazing projects.
+  </p>
+</header>
+
+<nav>
+  <a href="#about">About Me</a>
+  <a href="https://bsky.app/profile/iconicahmed.bsky.social" target="_blank">Bluesky</a>
+  <a href="https://www.youtube.com/@Iconicahmed7" target="_blank">YouTube</a>
+  <a href="https://discord.gg/KkYx4X5MFH" target="_blank">Discord</a>
+</nav>
+
+<main>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I’m Iconic Ahmed, a web developer focused on HTML, CSS, and JavaScript. I enjoy creating interactive and animated websites that educate and entertain. I also produce tutorials to help beginners learn coding and web development.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Tools & Skills</h2>
+    <ul class="skills-list">
+      <li>HTML & CSS</li>
+      <li>JavaScript & DOM Manipulation</li>
+      <li>Responsive Web Design</li>
+      <li>Animations & Interactive UI</li>
+      <li>Content Creation & Tutorials</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul class="projects-list">
+      <li><strong>Portfolio Website:</strong> Interactive website with animations and custom cursor.</li>
+      <li><strong>Tic Tac Toe & Rock-Paper-Scissors:</strong> Games built with HTML, CSS, and JavaScript.</li>
+      <li><strong>JavaScript Tutorials:</strong> Educational content to help beginners learn coding.</li>
+    </ul>
+  </section>
+
+  <!-- Rock Paper Scissors -->
+  <section id="rock-paper-scissors" style="text-align:center;">
+    <h2>Rock, Paper, Scissors</h2>
+    <p style="color:#bbb;">Choose your move and see if you can beat the computer!</p>
+    <div style="margin-top:1rem;">
+      <button class="rps-btn" onclick="playRPS('rock')">✊ Rock</button>
+      <button class="rps-btn" onclick="playRPS('paper')">✋ Paper</button>
+      <button class="rps-btn" onclick="playRPS('scissors')">✌ Scissors</button>
+    </div>
+    <p id="rps-result" style="margin-top:1rem;color:#00adee;font-weight:bold;"></p>
+    <p id="rps-score" style="color:#bbb;">You: 0 | Computer: 0</p>
+  </section>
+
+  <!-- Tic Tac Toe Game Section -->
+  <section id="tic-tac-toe" style="text-align:center;">
+    <h2>Tic Tac Toe</h2>
+    <p style="color:#bbb;">Play against the computer!</p>
+    <div class="ttt-board" id="ttt-board"></div>
+    <p id="ttt-result" style="margin-top:1rem;color:#00adee;font-weight:bold;"></p>
+    <button id="ttt-reset" class="rps-btn" style="margin-top:1rem;">Restart Game</button>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 Iconic Ahmed. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

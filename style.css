@@ -1,0 +1,184 @@
+/* Body & Global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #eee;
+  margin: 0; 
+  padding: 0;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+/* Custom Cursor */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #00adee;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, background 0.2s ease;
+  box-shadow: 0 0 10px #00adee, 0 0 20px #00adee55;
+  z-index: 9999;
+}
+
+header {
+  background: #1e1e1e;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 2px solid #00adee;
+  animation: fadeIn 1s ease forwards;
+}
+header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00adee;
+  margin-bottom: 1rem;
+  animation: rotateImage 3s linear infinite;
+}
+header h1 {
+  margin: 0.2rem 0;
+  font-size: 2.5rem;
+  color: #00adee;
+  animation: slideDown 1s ease forwards;
+}
+header p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+  color: #bbb;
+  animation: fadeIn 2s ease forwards;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background: #222;
+  padding: 1rem 0;
+  border-bottom: 1px solid #00adee;
+  animation: fadeIn 2s ease forwards;
+}
+nav a {
+  color: #00adee;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: background 0.3s, border-color 0.3s, transform 0.2s;
+}
+nav a:hover {
+  background: #00adee;
+  color: #121212;
+  border-color: #00adee;
+  transform: scale(1.1);
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+section {
+  margin-bottom: 3rem;
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00adee33;
+  animation: fadeInUp 1s ease forwards;
+}
+section h2 {
+  color: #00adee;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #00adee;
+  padding-bottom: 0.5rem;
+}
+
+ul.skills-list, ul.projects-list {
+  list-style: none;
+  padding: 0;
+}
+ul.skills-list li, ul.projects-list li {
+  background: #292929;
+  margin: 0.3rem 0;
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px #00adee55;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ul.skills-list li:hover, ul.projects-list li:hover {
+  transform: scale(1.05);
+  box-shadow: inset 0 0 8px #00adee88;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #1e1e1e;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Tic Tac Toe Styles */
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.ttt-cell {
+  width: 100px;
+  height: 100px;
+  background: #292929;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #00adee;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 0 5px #00adee55;
+}
+.ttt-cell:hover {
+  transform: scale(1.1);
+  background: #00adee22;
+  box-shadow: 0 0 15px #00adee88;
+}
+
+button.rps-btn {
+  background: #00adee;
+  color: #121212;
+  border: none;
+  padding: 10px 20px;
+  margin: 0.3rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+button.rps-btn:hover {
+  background: #00cfff;
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  nav { flex-direction: column; gap: 0.5rem; }
+  .ttt-board { grid-template-columns: repeat(3, 80px); gap: 8px; }
+  .ttt-cell { width: 80px; height: 80px; font-size: 2.5rem; }
+}
+
+/* Animations */
+@keyframes fadeIn { from {opacity:0} to {opacity:1} }
+@keyframes fadeInUp { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
+@keyframes slideDown { from {transform:translateY(-50px); opacity:0;} to {transform:translateY(0); opacity:1;} }
+@keyframes rotateImage { from {transform:rotate(0deg);} to {transform:rotate(360deg);} }
